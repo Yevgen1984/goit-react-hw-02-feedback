@@ -20,8 +20,7 @@ export const Feedback = ({
       <FeedbackOption onLeaveFeedback={countFeedback} options={options}/>
       <Statistics total={total} options={options} positivePercentage={countPositiveFeedbackPercentage}/>
       
-
-        </>
+       </>
 
   );
 };
