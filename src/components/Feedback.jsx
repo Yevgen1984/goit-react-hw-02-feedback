@@ -3,6 +3,9 @@
 
 import { Statistics } from "./Statistics/Statistics";
 import {FeedbackOption} from "./FeedbackOptions/FeedbackOptions";
+import { Section } from "./Section/SectionTitle";
+import { children } from "react";
+
 export const Feedback = ({
   options,
   countFeedback,
@@ -12,16 +15,8 @@ export const Feedback = ({
   
   return (
     <>
-      <h2>Please leave feedback</h2>
-      {/* <button name="good" type="button" onClick={countFeedback}>
-        Good
-      </button>
-      <button name="neutral" type="button" onClick={countFeedback}>
-        Neutral
-      </button>
-      <button name="bad" type="button" onClick={countFeedback}>
-        Bad
-      </button> */}
+     <Section title="Please leave feedback">{children}</Section>
+      
       <FeedbackOption onLeaveFeedback={countFeedback} options={options}/>
       <Statistics total={total} options={options} positivePercentage={countPositiveFeedbackPercentage}/>
       
