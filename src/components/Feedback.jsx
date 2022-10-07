@@ -1,17 +1,19 @@
 //import PropTypes from 'prop-types';
 //import { Paragraf, Span } from './User.styled';
 
+import { Statistics } from "./Statistics/Statistics";
+import {FeedbackOption} from "./FeedbackOptions/FeedbackOptions";
 export const Feedback = ({
-  options: { good, neutral, bad },
+  options,
   countFeedback,
-  countTotalFeedback,
+  total,
   countPositiveFeedbackPercentage,
 }) => {
   
   return (
     <>
       <h2>Please leave feedback</h2>
-      <button name="good" type="button" onClick={countFeedback}>
+      {/* <button name="good" type="button" onClick={countFeedback}>
         Good
       </button>
       <button name="neutral" type="button" onClick={countFeedback}>
@@ -19,22 +21,14 @@ export const Feedback = ({
       </button>
       <button name="bad" type="button" onClick={countFeedback}>
         Bad
-      </button>
-      <h2>Statistics</h2>
-      <ul>
-        <li>Good: {good}</li>
-        <li>Neutral: {neutral}</li>
-        <li>Bad: {bad}</li>
-        <li>Total: {countTotalFeedback}</li>
-        <li>Positive feedback: {countPositiveFeedbackPercentage()}%</li>
-      </ul>
-    </>
+      </button> */}
+      <FeedbackOption onLeaveFeedback={countFeedback} options={options}/>
+      <Statistics total={total} options={options} positivePercentage={countPositiveFeedbackPercentage}/>
+      
+
+        </>
+
   );
 };
 
-// User.propTypes = {
-//     user: PropTypes.shape({
-//         name: PropTypes.string.isRequired,
-//         email: PropTypes.string.isRequired,
-//     }).isRequired
-// }
+
