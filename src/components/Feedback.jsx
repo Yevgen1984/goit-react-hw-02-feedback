@@ -4,7 +4,7 @@
 import { Statistics } from "./Statistics/Statistics";
 import {FeedbackOption} from "./FeedbackOptions/FeedbackOptions";
 import { Section } from "./Section/SectionTitle";
-import { children } from "react";
+
 
 export const Feedback = ({
   options,
@@ -15,7 +15,7 @@ export const Feedback = ({
   
   return (
     <>
-     <Section title="Please leave feedback">{children}</Section>
+     <Section title="Please leave feedback"></Section>
       
       <FeedbackOption onLeaveFeedback={countFeedback} options={options}/>
       <Statistics total={total} options={options} positivePercentage={countPositiveFeedbackPercentage}/>
